@@ -470,17 +470,24 @@ sub evaluate_term{
 
 sub evaluate_factor{
     $_[0]=~s/^ *//;
-    return $& if $_[0]=~s/^[0-9]+//i; #  decimal constant
-    if( $_[0]=~/^\$[0-9A-F]+/i ){ # hex constant
-	$_[0]=~s/^\$/0x/;
-	$_[0]=~s/^0x[0-9A-F]+//i;
-	return oct($&);
+#    if( $_[0]=~/^\$[0-9A-F]+/i ){ # hex constant
+#	$_[0]=~s/^\$/0x/;
+#	$_[0]=~s/^0x[0-9A-F]+//i;
+#	return oct($&);
+#    }
+    if( $_[0]=~/^(?:\$|&|0x)[0-9A-F]+/i ){ # hex constant
+        $_[0]=~s/^(?:\$|&)/0x/;
+        $_[0]=~s/^0x[0-9A-F]+//i;
+        return oct($&);
     }
+
+    return $& if $_[0]=~s/^[0-9]+//i; #  decimal constant
+
     if( $_[0]=~/^\([^\)]+\)/ ){
-	$_[0]=~s/^\(//;
-	my $retval = evaluate_expression($_[0]);
-	$_[0]=~s/\)//;
-	return $retval;
+    $_[0]=~s/^\(//;
+    my $retval = evaluate_expression($_[0]);
+    $_[0]=~s/\)//;
+    return $retval;
     }
     if( $_[0]=~s/^\'// ){	# string or char constant
 	my $retval = 0;
