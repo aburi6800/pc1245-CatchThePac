@@ -39,13 +39,13 @@
         {
             "label": "install to PC-1251 Emulator(bin)",
             "type": "shell",
-            "command": "source ${workspaceFolder}/.vscode/tasks.env; cp dist/$PRODUCT_NAME.bin $PC1251EMU_HOME/programs/$PRODUCT_NAME.bin",
+            "command": "source ${workspaceFolder}/.vscode/tasks.env; cp dist/$PRODUCT_NAME.bin ~/.pc1251/programs/$PRODUCT_NAME.bin",
             "dependsOn": "assemble"
         },
         {
             "label": "install to PC-1251 Emulator(bas)",
             "type": "shell",
-            "command": "source ${workspaceFolder}/.vscode/tasks.env; { echo '# title: REVERSE PACMAN'; echo '# bin: ' $PRODUCT_NAME.bin ' &C500'; cat src/$PRODUCT_NAME.bas;} > $PC1251EMU_HOME/programs/$PRODUCT_NAME.bas",
+            "command": "source ${workspaceFolder}/.vscode/tasks.env; { echo '# title: ' $PRODUCT_NAME; echo '# bin: ' $PRODUCT_NAME.bin ' &C500'; cat src/$PRODUCT_NAME.bas;} > ~/.pc1251/programs/$PRODUCT_NAME.bas",
         },
         {
             "label": "Start PC-1251 Emulator",
