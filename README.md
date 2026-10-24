@@ -16,10 +16,12 @@ It consists of BASIC and machine code. <br>
 ## How to Play
 
 - The goal of this game is to control a monster and catch Pac-Man.
-- The screen contains dots and power pellets. Pac-Man moves slowly where there are dots and quickly where there aren’t. The monster, on the other hand, moves quickly where there are dots and slowly where there aren’t.
-- The left and right sides of the screen are warp tunnels that transport you to the opposite side.
-- When a monster catches Pac-Man, Pac-Man is eliminated and the next Pac-Man appears.
-- When Pac-Man eats a Power Pellet, the monsters become sluggish for a certain amount of time. If Pac-Man is caught by a monster during this time, it’s game over. Pac-Man moves faster at all times after eating a Power Pellet.
+- There are dots on the screen. Pac-Man moves slowly where there are dots and quickly where there aren't. He is not affected by monster dots.
+- The left and right sides of the screen are warp tunnels that take you to the opposite side.
+- When a monster catches Pac-Man, Pac-Man is eliminated and a new Pac-Man appears. Additionally, the dots on the half of the screen opposite the monster’s position respawn, and a Power Pellet appears somewhere on the screen.
+- When Pac-Man eats a Power Pellet, the monsters get sulky for a certain amount of time, slowing their movement speed, while Pac-Man moves faster. If a monster is caught by Pac-Man during this time, it’s game over.
+- When Pac-Man eats all the dots on the screen, the game advances to the next level, which becomes slightly more difficult. Level 4 is the hardest, and the difficulty level remains similar to that of Levels 3 and 4 thereafter.
+- Note that the game also ends if Pac-Man eats all the dots without being caught even once.
 
 <br>
 
@@ -98,8 +100,8 @@ Hitoshi Iwai (aburi6800)
 
 ## Update History
 
-October 21, 2026, ver. 0.50
-- Beta release
+October 24, 2026, ver. 1.00
+- Initial release
 
 <br>
 
