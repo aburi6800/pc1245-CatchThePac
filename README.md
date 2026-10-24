@@ -17,6 +17,7 @@ It consists of BASIC and machine code. <br>
 
 - The goal of this game is to control a monster and catch Pac-Man.
 - There are dots on the screen. Pac-Man moves slowly where there are dots and quickly where there aren't. He is not affected by monster dots.
+- The left and right sides of the screen are warp tunnels that take you to the opposite side. Note that you cannot change the direction in which monsters are moving at the entrance to a warp tunnel.
 - The left and right sides of the screen are warp tunnels that take you to the opposite side.
 - When a monster catches Pac-Man, Pac-Man is eliminated and a new Pac-Man appears. Additionally, the dots on the half of the screen opposite the monster’s position respawn, and a Power Pellet appears somewhere on the screen.
 - When Pac-Man eats a Power Pellet, the monsters get sulky for a certain amount of time, slowing their movement speed, while Pac-Man moves faster. If a monster is caught by Pac-Man during this time, it’s game over.
