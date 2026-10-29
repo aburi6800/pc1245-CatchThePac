@@ -74,22 +74,22 @@ Please transfer the following two files to your smartphone and load them into th
 
 <br>
 
-## Play on PC-1251 Emulator
+## Play on sc61box
 
-Copy the following file to the `~/.pc1251/programs` directory.
+Copy the following file to the `~/.sc61box/programs` directory.
 
 ```
 /src/CatchThePac.bas
 /dist/CatchThePac.bin
 ```
 
-Add the following line to the top of `/src/CatchThePac.bas`.
+Add the following line to the top of `CatchThePac.bas`.
 
 ```
 # bin: CatchThePac.bin &C500
 ```
 
-Start the PC-1251 Emulator, and it will run when you select it with [Ctrl]+[O].
+Start the sc61box, and it will run when you select it with [Ctrl]+[O].
 
 <br>
 
@@ -118,4 +118,4 @@ MIT Licence
 - [Pocket Tools](http://pocket.free.fr/html/soft/pocket-tools_e.html)
 - [Genymotion](https://www.genymotion.com/)
 - [Pokecom Go](https://digihori.jimdofree.com/index/emulator/)
-- [PC-1251 Emulator](https://github.com/woriguchi/pc1251-emulator/tree/main)
+- [sc61box](https://github.com/woriguchi/sc61box)

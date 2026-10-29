@@ -37,20 +37,20 @@
             "dependsOn": "assemble"
         },
         {
-            "label": "install to PC-1251 Emulator(bin)",
+            "label": "install to sc61box(bin)",
             "type": "shell",
-            "command": "source ${workspaceFolder}/.vscode/tasks.env; cp dist/$PRODUCT_NAME.bin ~/.pc1251/programs/$PRODUCT_NAME.bin",
+            "command": "source ${workspaceFolder}/.vscode/tasks.env; cp dist/$PRODUCT_NAME.bin ~/.sc61box/programs/$PRODUCT_NAME.bin",
             "dependsOn": "assemble"
         },
         {
-            "label": "install to PC-1251 Emulator(bas)",
+            "label": "install to sc61box(bas)",
             "type": "shell",
-            "command": "source ${workspaceFolder}/.vscode/tasks.env; { echo '# title: ' $PRODUCT_NAME; echo '# bin: ' $PRODUCT_NAME.bin ' &C500'; cat src/$PRODUCT_NAME.bas;} > ~/.pc1251/programs/$PRODUCT_NAME.bas",
+            "command": "source ${workspaceFolder}/.vscode/tasks.env; { echo '# title: ' $PRODUCT_NAME; echo '# bin: ' $PRODUCT_NAME.bin ' &C500'; cat src/$PRODUCT_NAME.bas;} > ~/.sc61box/programs/$PRODUCT_NAME.bas",
         },
         {
-            "label": "Start PC-1251 Emulator",
+            "label": "Start sc61box",
             "type": "shell",
-            "command": "source ${workspaceFolder}/.vscode/tasks.env; set +a; cd $PC1251EMU_HOME; uv run pc1251 --fresh --model 1245",
+            "command": "source ${workspaceFolder}/.vscode/tasks.env; set +a; cd $SC61BOX_HOME; uv run sc61box --fresh --model 1245",
         },   
     ]
 }

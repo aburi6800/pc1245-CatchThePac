@@ -80,22 +80,22 @@ PCで次のWAVファイルを再生することでロードできます。<br>
 
 <br>
 
-## PC-1251 Emulatorでプレイする
+## sc61boxでプレイする
 
-以下のファイルを、`~/.pc1251/programs`ディレクトリにコピーします。
+以下のファイルを、`~/.sc61box/programs`ディレクトリにコピーします。
 
 ```
 /src/CatchThePac.bas
 /dist/CatchThePac.bin
 ```
 
-`/src/CatchThePac.bas`の先頭に以下の行を追加します。
+`CatchThePac.bas`の先頭に以下の行を追加します。
 
 ```
 # bin: CatchThePac.bin &C500
 ```
 
-PC-1251 Emulatorを起動し、[Ctrl]+[O]で選択すると実行されます。
+sc61boxを起動し、[Ctrl]+[O]で選択すると実行されます。
 
 <br>
 
@@ -124,4 +124,4 @@ MIT Licence
 - [Pocket Tools](http://pocket.free.fr/html/soft/pocket-tools_e.html)
 - [Genymotion](https://www.genymotion.com/)
 - [Pokecom Go](https://digihori.jimdofree.com/index/emulator/)
-- [PC-1251 Emulator](https://github.com/woriguchi/pc1251-emulator/tree/main)
+- [sc61box](https://github.com/woriguchi/sc61box)
